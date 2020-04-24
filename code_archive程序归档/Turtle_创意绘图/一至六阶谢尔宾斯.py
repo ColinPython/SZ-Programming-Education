@@ -2,7 +2,6 @@
 from turtle import*
 a = 0
 
-
 def san(long):
     global a
     s = ['yellow', 'red', 'blue']
