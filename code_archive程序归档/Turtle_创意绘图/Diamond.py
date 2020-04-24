@@ -8,6 +8,7 @@ t.penup()
 t.right(90)
 t.fd(100)
 t.pendown()
+t.colormode(255)
 # 区域1
 t.color((54, 100, 139), (54, 100, 139))
 t.begin_fill()
@@ -106,3 +107,5 @@ t.begin_fill()
 t.goto(0, 69)
 t.goto(0, -100)
 t.end_fill()
+
+t.done()

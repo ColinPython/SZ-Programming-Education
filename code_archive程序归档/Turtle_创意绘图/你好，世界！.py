@@ -128,6 +128,7 @@ def Exclamation(color):
 # turtle.setup(600,600,0,0)
 turtle.pensize(11)
 
+
 turtle.speed(1)
 H('blue')
 E('green')
