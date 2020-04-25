@@ -5,18 +5,16 @@
 
 import turtle
 
-turtle.tracer(100)
+
+def skip(x, y):   # 设置一个跳跃 切换坐标的函数
+    turtle.penup()  # 抬起画笔
+    turtle.goto(x, y)  # 移到（x,y）坐标
+    turtle.pendown()  # 落下画笔
 
 
-def skip(x, y):
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pendown()
-
-
-def H(color):
+def H(color):    # 声明定义各个绘制H字母的函数  （传入的实参是color）
     turtle.color(color)
-    skip(-300 + 5, 100)
+    skip(-300 + 5, 100)  # 调用切换坐标的函数
     turtle.right(90)
     turtle.fd(100)
     skip(-300 + 5, 50)
@@ -30,7 +28,7 @@ def H(color):
 
 def E(color):
     turtle.color(color)
-    skip(55 - 300 + 5, 25)
+    skip(55 - 300 + 5, 25)  # 函数内 调用skip函数切换坐标点
     turtle.fd(46)
     turtle.left(90)
     turtle.circle(23, 180 + 130)
@@ -39,7 +37,7 @@ def E(color):
 
 def L(color1, color2):
     turtle.color(color1)
-    skip(115 - 300 + 5, 100)
+    skip(115 - 300 + 5, 100)  # 函数内 调用skip函数切换坐标点
     turtle.right(90)
     turtle.fd(100)
     skip(140 - 300, 100)
@@ -50,13 +48,13 @@ def L(color1, color2):
 
 def O(color):
     turtle.color(color)
-    skip(180 - 300 + 5, 50)
+    skip(180 - 300 + 5, 50)  # 函数内 调用skip函数切换坐标点
     turtle.circle(25, 360)
 
 
 def dot(color):
     turtle.color(color)
-    skip(220 - 300 + 5, 0)
+    skip(220 - 300 + 5, 0)  # 函数内 调用skip函数切换坐标点
     turtle.left(60)
     turtle.fd(7)
     turtle.left(120)
@@ -78,13 +76,13 @@ def W(color):
 
 def O2(color):
     turtle.color(color)
-    skip(320 - 300 + 5, 50)
+    skip(320 - 300 + 5, 50)  # 函数内 调用skip函数切换坐标点
     turtle.circle(-25, 360)
 
 
 def R(color):
     turtle.color(color)
-    skip(360 - 300 + 5, 50)
+    skip(360 - 300 + 5, 50)  # 函数内 调用skip函数切换坐标点
     turtle.fd(8)
     turtle.right(90)
     turtle.fd(50)
@@ -97,7 +95,7 @@ def R(color):
 
 def L2(color):
     turtle.color(color)
-    skip(405 - 300 + 5, 100)
+    skip(405 - 300 + 5, 100)  # 函数内 调用skip函数切换坐标点
     turtle.right(90)
     turtle.fd(100)
     turtle.left(90)
@@ -105,7 +103,7 @@ def L2(color):
 
 def D(color):
     turtle.color(color)
-    skip(470 - 300 + 5, 25)
+    skip(470 - 300 + 5, 25)  # 函数内 调用skip函数切换坐标点
     turtle.left(90)
     turtle.circle(25, 360)
     turtle.fd(75)
@@ -125,12 +123,14 @@ def Exclamation(color):
     turtle.dot(10)
 
 
-# turtle.setup(600,600,0,0)
-turtle.pensize(11)
+# 上面都是定义函数 定义好了 下面开始运行程序
+turtle.tracer(100)  # 不跟踪画笔 直接现实结果
+turtle.setup(900, 600, 300, 300)  # 设置一个长为900  宽为600的窗口 呈现窗口的位置在（300，300）
+turtle.pensize(11)  # 设置笔的粗细
 
 
-turtle.speed(1)
-H('blue')
+turtle.speed(1)  # 设置画笔速度
+H('blue')    # 调用函数H 绘制H字母（传入参数设置为蓝色）
 E('green')
 L('purple', 'red')
 O('yellow')
@@ -140,8 +140,8 @@ O2('orange')
 R('brown')
 L2('pink')
 D('#b0c4de')
-Exclamation('#333')
+Exclamation('#333')  # Exclamation感叹号 调用函数
 
-turtle.hideturtle()
-turtle.update()
-turtle.done()
+turtle.hideturtle()  # 隐藏画笔
+turtle.update()  # 更新画布窗口
+turtle.done()  # 绘制完成  不退出程序
