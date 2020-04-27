@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author: ColinPython_榴莲老师
 # 关注微信公众号：“ 青联科创 ”获得等多有趣代码教程
-# 日期:2020-4-25,使用的工具:PyCharm,文件名:分形树
+# 日期:2020-4-25,使用的工具:PyCharm,文件名:绘制分形树
 
 import turtle
 
