@@ -2,8 +2,7 @@
 
 from turtle import *
 
-
-# setup(450,535,None,None)
+setup(800, 605, None, None)
 
 def wall():
     penup()
@@ -411,6 +410,7 @@ def nose():
     penup()
 
 
+tracer(False)
 wall()
 body()
 marginal()
@@ -421,4 +421,45 @@ hand()
 nose()
 eyes()
 
+
+
+
+
+pencolor('black')
+penup()
+goto(100, -45)
+pendown()
+write('授课老师：', move=False, align="left", font=("华文中宋", 16, 'bold'))
+
+pencolor("#285078")
+penup()
+goto(100, -100)
+pendown()
+write('   榴莲老师', move=False, align="left", font=("华文中宋", 24, 'bold'))
+
+penup()
+goto(-500, -210)
+pendown()
+for i in range(2):
+    forward(800)
+    left(90)
+    forward(500)
+    left(90)
+
+
+penup()
+goto(-300, 0)
+pendown()
+register_shape("榴莲老师头像.gif")
+register_shape("E:\\Python网络课合作项目\\动图.gif")
+print(getshapes())
+print(register_shape)
+shape("E:\\Python网络课合作项目\\动图.gif")
+stamp()  # ying'zhang
+
+
+# bgpic('E:\\Python网络课合作项目\\底部导航关注公众号.gif')
+
+
+ht()
 done()
