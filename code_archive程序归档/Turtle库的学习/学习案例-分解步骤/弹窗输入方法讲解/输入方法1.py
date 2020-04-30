@@ -4,7 +4,7 @@
 # 日期:2020-4-30,使用的工具:PyCharm,文件名:输入方法1|textinput
 
 import turtle
-wn = turtle.Screen()
+wn = turtle.Screen()  # Screen 美 /skriːn/  屏幕
 wn.screensize(800, 600, "green")
 
 t = wn.textinput("应用的标题title【创意绘图工具】", "请输入想绘制什么图形的名字")
@@ -20,8 +20,5 @@ t = wn.textinput("应用的标题title【创意绘图工具】", "请输入想�
 
 print(type(t))  # 类型 <class 'str'>
 print(t)   # 打印出来是字符串类型
-
-
-
 
 turtle.done()
