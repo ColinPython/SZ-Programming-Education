@@ -15,12 +15,12 @@ t.screensize(700, 500, "silver")  # 银色700*500画布
 t.speed(10)  # 画笔速度，0-10，10最快
 
 # 2.五角星
-def pentagram():
+def pentagram(a):
     t.hideturtle()
     t.color("red")
     t.begin_fill()
     for i in range(5):
-        t.fd(100)
+        t.fd(a)
         t.right(144)  # 五角星的角度
     t.end_fill()
 
